@@ -127,7 +127,7 @@ article > h1 {
     margin-bottom: 15px;
     background: linear-gradient(45deg, #3420a1,#d25893d3,#ffa68dfb, #f1be93);
     background-size: 300% 300%;
-    animation: colors 10s ease infinite;
+    animation: colors 5s ease infinite;
     /* Formato irregular para simular a passada do pincel */
     clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
     border: 6px solid;
