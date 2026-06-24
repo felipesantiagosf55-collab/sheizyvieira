@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agende seu Horário</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/50f439f8e3.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/imask"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <section id="img"><img src="sheizy.jpg" alt="foto"></section>
+            <h1>Sheizy Vieira</h1>
+        </header>
+        <h2>Agende sua Make</h2>
+        <section>
+             <form id="whatsappForm">
+                <input type="text" name="nome" id="nome" placeholder="Nome completo:" required>
+
+                <input type="text" name="tel" id="tel" placeholder="Telefone:" required>
+
+                <input type="text" id="data" placeholder="data:" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'">
+
+            
+                <button type="button" id="whats" onclick="enviarParaWhatsApp()">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </button> 
+            </form>
+        </section>
+        <button onclick="javascript:history.go(-1)">Voltar</button>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

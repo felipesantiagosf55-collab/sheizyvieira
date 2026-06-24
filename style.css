@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-shadow: 0px;
+}
+body{
+    background-color: black;
+    color: white;   
+}
+main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    border: 12px solid black;
+}
+section#img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #efefef;
+    height: 180px;
+    width: 180px;
+    margin: 20px 0px 6px 0px;
+    padding: 4px;
+    border-radius: 50%;
+    background: linear-gradient( #3420a1,#d25893d3,#ffa68dfb, #f1be93);
+    background-size: 300% 300%;
+    animation: colors 10s ease infinite;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main > header > h1 {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 15px;  
+}
+main > header > h3.espaco {
+    margin-bottom: 20px;
+}
+main > h2 {
+    /* Posicionamento e tamanho para o efeito */
+    position: relative;
+    padding: 10px;
+    width: 89vw;
+    margin-bottom: 15px;
+    /* Criação do efeito de pincelada usando gradiente */
+    background: linear-gradient(45deg, #3420a1,#d25893d3,#ffa68dfb, #f1be93);
+    background-size: 300% 300%;
+    animation: colors 10s ease infinite;
+    
+    /* Formato irregular para simular a passada do pincel */
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+    border: 6px solid;
+}
+header > h1 { 
+    padding-right: 20px;
+}
+section {
+    margin-top: 15px;
+}
+input {
+    text-align: left;
+    font-size: 1em;
+    padding: 0px 10px;
+    margin-bottom: 15px;
+    background-color: #efefef;
+    width: 88vw;
+    height: 40px;
+    border-radius: 8px; 
+    border: 0px;
+}
+button {
+    color: #000000;
+    text-align: center;
+    background-color: #efefef;
+    width: 92vw;
+    height: 45px;
+    border-radius: 8px;
+    padding: 0px 10px;
+    margin-bottom: 15px; 
+}
+button#whats {
+    margin-top: 30px;
+}
+button:hover {
+    cursor: pointer;
+    background-color: #d7d7d7e0;
+}
+mark {
+    background-color: #000000;
+    color: white;
+    border-bottom: 3px solid white;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    margin: auto;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+article > h1 {
+    width: 88vw;
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, #3420a1,#d25893d3,#ffa68dfb, #f1be93);
+    background-size: 300% 300%;
+    animation: colors 10s ease infinite;
+    /* Formato irregular para simular a passada do pincel */
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+    border: 6px solid;
+}
+nav#pg1 {
+    background-color: black;
+    width: 80vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav#pg1 > a {
+    padding: 15px;
+    background-color: #efefef;
+    width: 100%;
+    text-align: center;
+    margin: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 8px;
+}
+nav#pg1 > a:hover {
+    cursor: pointer;
+    background-color: #d7d7d7e0;   
+}
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media screen and (min-width:683px) {
+    nav#pg1 {
+        width: 650px;
+    }
+    article {
+        width: 650px;
+    }
+    article > h1 {
+        width: 650px;
+    }
+    button {
+        width: 670px;
+    }
+    main > h2 {
+        width: 640px;
+    }
+    input {
+        width: 650px;
+    }
+}
+
+@media screen and (min-width:1345px) {
+    form {
+        width: 800px;
+    } 
+}
