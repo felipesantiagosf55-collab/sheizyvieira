@@ -1,10 +1,11 @@
 function enviarcursoWhatsApp() {
-    const meuNumerWhatsApp = "5543999540010"; 
+    const meuNumerWhatsApp = "5542984219532"; 
 
-    const textMensagem = `Olá! Gostaria de mais informações sobre os cursos`;
+    const Mensagem = `Olá, tudo bem? 
+Gostaria de mais informações sobre os cursos...`;
 
     // 4. Codificar a mensagem para a URL (suporta acentos e espaços)
-    const mensageCodificada = encodeURIComponent(textMensagem);
+    const mensageCodificada = encodeURIComponent(Mensagem);
 
     // 5. Gerar o link wa.me
     const urlWhatsApp = `https://wa.me/${meuNumerWhatsApp}?text=${mensageCodificada}`;
@@ -15,7 +16,7 @@ function enviarcursoWhatsApp() {
 
 function enviarParaWhatsApp() {
     //variavel com o numero do meu cliente
-    const meuNumeroWhatsApp = "5543999540010"; 
+    const meuNumeroWhatsApp = "5542984219532"; 
 
     const nome = document.getElementById('nome').value;
     const telefone = document.getElementById('tel').value;
@@ -37,7 +38,9 @@ function enviarParaWhatsApp() {
     
 
     //Montar o texto no whats
-    const textoMensagem = `Olá! Meu nome é ${nome}. Gostaria de agendar uma Make no dia ${dataFormatada}!`;
+    const textoMensagem = `Olá, tudo bem? 
+Meu nome é ${nome}, gostaria de agendar uma maquiagem no dia ${dataFormatada}! 
+Qual a disponibilidade de horário?`;
 
     // 4. Codificar a mensagem para a URL (suporta acentos e espaços)
     const mensagemCodificada = encodeURIComponent(textoMensagem);
@@ -62,6 +65,3 @@ const maskOptions = {
   mask: '(00) 0 0000-0000'
 };
 const mask = IMask(element, maskOptions);
-
-
-

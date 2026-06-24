@@ -8,7 +8,7 @@
     box-shadow: 0px;
 }
 body{
-    background-color: black;
+    background-color: rgb(23, 23, 23);
     color: white;   
 }
 main {
@@ -25,7 +25,7 @@ img {
     border-radius: 50%;
     object-fit: cover;
     overflow: hidden;
-    border: 12px solid black;
+    border: 12px solid rgb(23, 23, 23);
 }
 section#img {
     display: flex;
@@ -39,7 +39,7 @@ section#img {
     border-radius: 50%;
     background: linear-gradient( #3420a1,#d25893d3,#ffa68dfb, #f1be93);
     background-size: 300% 300%;
-    animation: colors 10s ease infinite;
+    animation: colors 5s ease infinite;
 }
 header {
     display: flex;
@@ -64,7 +64,7 @@ main > h2 {
     /* Criação do efeito de pincelada usando gradiente */
     background: linear-gradient(45deg, #3420a1,#d25893d3,#ffa68dfb, #f1be93);
     background-size: 300% 300%;
-    animation: colors 10s ease infinite;
+    animation: colors 5s ease infinite;
     
     /* Formato irregular para simular a passada do pincel */
     clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
@@ -133,7 +133,7 @@ article > h1 {
     border: 6px solid;
 }
 nav#pg1 {
-    background-color: black;
+    background-color: rgb(23, 23, 23);
     width: 80vw;
     margin: auto;
     display: flex;
