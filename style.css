@@ -7,9 +7,14 @@
     padding: 0px;
     box-shadow: 0px;
 }
+:root {
+    --cor-de-fundo:rgb(242, 221, 244);
+    --cor-da-escrita:#000000da;
+    --cor-de-ista:linear-gradient(#3420a1,#d25893d3,#ffa68dfb, #f1be93);
+}
 body{
-    background-color: rgb(23, 23, 23);
-    color: white;   
+    background-color: var(--cor-de-fundo);
+    color:var(--cor-da-escrita);   
 }
 main {
     text-align: center;
@@ -25,15 +30,15 @@ img {
     border-radius: 50%;
     object-fit: cover;
     overflow: hidden;
-    border: 12px solid rgb(23, 23, 23);
+    border: 7px solid var(--cor-de-fundo);
 }
 section#img {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #efefef;
-    height: 180px;
-    width: 180px;
+    height: 170px;
+    width: 170px;
     margin: 20px 0px 6px 0px;
     padding: 4px;
     border-radius: 50%;
@@ -56,19 +61,9 @@ main > header > h3.espaco {
     margin-bottom: 30px;
 }
 main > h2 {
-    /* Posicionamento e tamanho para o efeito */
-    position: relative;
-    padding: 10px;
-    width: 89vw;
-    margin-bottom: 15px;
-    /* Criação do efeito de pincelada usando gradiente */
-    background: linear-gradient(45deg, #3420a1,#d25893d3,#ffa68dfb, #f1be93);
-    background-size: 300% 300%;
-    animation: colors 5s ease infinite;
-    
-    /* Formato irregular para simular a passada do pincel */
-    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
-    border: 6px solid;
+    width: 88vw;
+    margin: 30px 0px 30px 0px;
+    font-size: 1.9em;
 }
 header > h1 { 
     padding-right: 20px;
@@ -79,39 +74,62 @@ section {
 input {
     text-align: left;
     font-size: 1em;
-    padding: 0px 10px;
+    padding: 0px 15px;
     margin-bottom: 15px;
-    background-color: #efefef;
+    border-color: #d25893d3; /* Acende com a cor do seu gradiente ao clicar */
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 15px rgba(210, 88, 147, 0.2);
+    color: var(--cor-da-escrita);
     width: 88vw;
-    height: 40px;
-    border-radius: 8px; 
-    border: 0px;
+    height: 45px;
+    border-radius: 12px; 
+    border: 1px solid rgba(210, 88, 147, 0.278);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #d25893d3; /* Acende com a cor do seu gradiente ao clicar */
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 0 15px rgba(210, 88, 147, 0.2);
 }
 button {
-    color: #000000;
+    color: var(--cor-da-escrita); /* Texto branco para o modo dark futurista */
     text-align: center;
-    background-color: #efefef;
+   
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     width: 92vw;
-    height: 45px;
-    border-radius: 8px;
+    height: 48px; /* Ligeiramente mais alto para design moderno */
+    border-radius: 12px;
     padding: 0px 10px;
     margin-bottom: 15px; 
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-button#whats {
-    margin-top: 30px;
-}
+
 button:hover {
     cursor: pointer;
-    background-color: #d7d7d7e0;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
 }
-mark {
-    background-color: #000000;
-    color: white;
-    border-bottom: 3px solid white;
+
+/* Botão do WhatsApp estilo "New Meta/WhatsApp" Dark */
+button#whats {
+    margin-top: 30px;
+    background: #00a884; /* Verde oficial do novo WhatsApp */
+    border: none;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 168, 132, 0.3);
 }
-a {
-    text-decoration: none;
-    color: black;
+
+button#whats:hover {
+    background: #00cc9f;
+    box-shadow: 0 0 25px rgba(0, 168, 132, 0.6); /* Brilho de energia verde */
 }
 article {
     display: flex;
@@ -124,34 +142,41 @@ article {
 }
 article > h1 {
     width: 88vw;
-    margin-bottom: 15px;
-    background: linear-gradient(45deg, #3420a1,#d25893d3,#ffa68dfb, #f1be93);
-    background-size: 300% 300%;
-    animation: colors 5s ease infinite;
-    /* Formato irregular para simular a passada do pincel */
-    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
-    border: 6px solid;
+    margin: 10px 0px 15px 0px;
+}
+a {
+    text-decoration: none;  
+    background: rgba(255, 255, 255, 0.7);
 }
 nav#pg1 {
-    background-color: rgb(23, 23, 23);
     width: 80vw;
     margin: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 15px; /* Adicionado para controlar o espaçamento sem usar margens largas */
 }
 nav#pg1 > a {
     padding: 15px;
-    background-color: #efefef;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     width: 100%;
     text-align: center;
-    margin: 15px;
     font-family: Arial, Helvetica, sans-serif;
-    border-radius: 8px;
+    border-radius: 12px; /* Bordas um pouco mais suaves */
+    border: 1.5px solid rgba(255, 255, 255, 0.868); /* Borda fina tecnológica */
+    color: var(--cor-da-escrita);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.2);
 }
 nav#pg1 > a:hover {
     cursor: pointer;
-    background-color: #d7d7d7e0;   
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffa68dfb; /* Acende a borda com uma das cores do seu gradiente */
+    box-shadow: 0 0 15px rgba(210, 88, 147, 0.4); /* Glow futurista */
+    transform: translateY(-2px); /* Leve flutuação */
 }
 @keyframes colors {
     0% {
@@ -164,7 +189,6 @@ nav#pg1 > a:hover {
         background-position: 0% 50%;
     }
 }
-
 @media screen and (min-width:683px) {
     nav#pg1 {
         width: 650px;
@@ -185,7 +209,6 @@ nav#pg1 > a:hover {
         width: 650px;
     }
 }
-
 @media screen and (min-width:1345px) {
     form {
         width: 800px;
